@@ -13,9 +13,9 @@ export default function Navigation() {
   return (
     <nav className="flex flex-row-reverse items-center gap-2">
       <ModeToggle />
-      <Button variant="outline" size="icon" onClick={() => null}>
+      {/* <Button variant="outline" size="icon" onClick={() => null}>
         <Languages />
-      </Button>
+      </Button> */}
       <Button
         variant="outline"
         size="icon"
@@ -26,11 +26,13 @@ export default function Navigation() {
       <Button variant="outline" size="icon" onClick={() => null}>
         <TwitterLogoIcon weight="bold" />
       </Button>
-      <Button variant="outline" size="icon" onClick={() => null}>
+      <Button variant="outline" onClick={() => null}>
+        Docs
         <BookOpen />
       </Button>
-      <Button title="Coming Soon" className="hidden md:flex">
-        Download <Download />
+      <Button title="Coming Soon">
+        <span className="font-bold">Install</span>
+        <Download />
       </Button>
     </nav>
   );

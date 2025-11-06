@@ -10,7 +10,7 @@ export default function TopBar() {
   return (
     <>
       <div
-        className="flex sm:flex-row flex-col gap-4 sm:gap-0 items-center justify-between py-8 sm:py-6 px-8"
+        className="flex flex-col items-center justify-between gap-4 px-8 py-8 bg-accent/50 sm:flex-row sm:gap-0 sm:py-6"
         role="topbar"
       >
         <div

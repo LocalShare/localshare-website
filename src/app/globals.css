@@ -125,6 +125,6 @@
 
 @layer base {
   div[role="grid"] > * > ul > li {
-    @apply hover:text-accent-foreground hover:cursor-pointer transition-colors w-fit;
+    @apply transition-colors hover:text-accent-foreground hover:cursor-pointer w-fit;
   }
 }

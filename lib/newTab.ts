@@ -4,9 +4,10 @@ import { NewTabOptions } from "./newTab.types";
 
 export default function newTab(
   href: string,
-  { rel, download, type, hreflang, referrerpolicy }: NewTabOptions = {},
+  { rel, download, type, hreflang, referrerpolicy }: NewTabOptions = {}
 ): void {
-  if (!href || href === "" || !String(href)) throw new Error("");
+  if (!href || href === "" || !String(href))
+    throw new Error("No href specified");
 
   if (typeof document === "undefined")
     throw new Error("newtab.js can only run in a browser environment");
