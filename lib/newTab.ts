@@ -4,7 +4,7 @@ import { NewTabOptions } from "./newTab.types";
 
 export default function newTab(
   href: string,
-  { rel, download, type, hreflang, referrerpolicy }: NewTabOptions = {}
+  { rel, download, type, hreflang, referrerpolicy }: NewTabOptions = {},
 ): void {
   if (!href || href === "" || !String(href))
     throw new Error("No href specified");

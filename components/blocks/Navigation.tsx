@@ -26,11 +26,11 @@ export default function Navigation() {
       <Button variant="outline" size="icon" onClick={() => null}>
         <TwitterLogoIcon weight="bold" />
       </Button>
-      <Button variant="outline" onClick={() => null}>
+      {/* <Button variant="outline" onClick={() => null}>
         Docs
         <BookOpen />
-      </Button>
-      <Button title="Coming Soon">
+      </Button> */}
+      <Button title="Coming soon" onClick={() => alert("Coming soon :)")}>
         <span className="font-bold">Install</span>
         <Download />
       </Button>
