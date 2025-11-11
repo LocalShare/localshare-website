@@ -29,7 +29,9 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body className={`${inter.className} antialiased select-none`}>
+        <body
+          className={`${inter.className} antialiased select-none bg-background! text-foreground!`}
+        >
           {process.env.NODE_ENV === "development" ? null : <DisableDevtool />}
           <ThemeProvider
             attribute="class"

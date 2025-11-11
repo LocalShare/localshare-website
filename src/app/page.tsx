@@ -32,12 +32,12 @@ export default function Home() {
             on the go, all while keeping your data private and secure.
           </p>
           <p>
-            <span className="font-bold uppercase text-destructive">
+            <strong className="font-bold uppercase text-destructive">
               This project is in active development.
-            </span>{" "}
+            </strong>{" "}
             We're plannning on releasing this app for Android and Windows. The
             progress can be seen on{" "}
-            <Alink href="https://github.com/orgs/LocalShare/projects/2">
+            <Alink href="https://development.localshare.ir">
               our development tracker board
             </Alink>
             .
@@ -49,15 +49,15 @@ export default function Home() {
           </p>
           <p>Await!</p>
         </div>
-        <figure className="flex flex-col items-center gap-2 mx-auto ">
+        <figure className="flex flex-col items-center gap-2 mx-auto saturate-0">
           <Image
             src="/screenshot-app.jpg"
             width={200}
             height={0}
             alt="Demo screenshot of LocalShare"
-            className="border rounded-lg shadow-sm w-fit saturate-0"
+            className="border rounded-lg shadow-sm w-fit"
           />
-          <figcaption className="text-sm text-center text-ring saturate-0">
+          <figcaption className="text-sm text-center text-ring">
             Demo screenshot of LocalShare
           </figcaption>
         </figure>

@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="bg-accent/50">
       <Separator />
-      <div className="flex items-center justify-between w-full p-8">
+      <div className="flex items-center justify-between w-full p-8 flex-col gap-6 md:flex-row">
         <div
           className="flex items-center gap-3 transition-opacity opacity-50 hover:opacity-75 hover:cursor-pointer w-fit"
           role="button"
@@ -45,16 +45,14 @@ export default function Footer() {
       >
         <div>
           <ul className="flex flex-col gap-6 text-sm lg:gap-2 text-muted-foreground">
-            <li onClick={() => newTab("https://github.com/LocalShare")}>
-              GitHub
+            <li>
+              <Link href="/download">Download</Link>
             </li>
-            <li onClick={() => newTab("https://twitter.com/")}>Twitter</li>
-            <li
-              onClick={() =>
-                newTab("https://github.com/orgs/LocalShare/discussions")
-              }
-            >
-              Disscusions
+            <li>Blog</li>
+            <li>
+              <Link href="https://github.com/orgs/LocalShare/discussions">
+                Disscusions
+              </Link>
             </li>
           </ul>
         </div>
@@ -65,10 +63,10 @@ export default function Footer() {
               <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="#">License</Link>
+              <Link href="/license">License</Link>
             </li>
             <li>
-              <Link href="#">Privacy Policy</Link>
+              <Link href="/privacy">Privacy Policy</Link>
             </li>
           </ul>
         </div>
@@ -90,15 +88,22 @@ export default function Footer() {
         <div>
           <ul className="flex flex-col gap-6 text-sm lg:gap-2 text-muted-foreground">
             <li>
-              <Link href="/download">Download</Link>
+              <Link href="https://docs.localshare.ir" target="_blank">
+                Documentations
+              </Link>
             </li>
-            <li>
+            {/* <li>
               <Tip tipText="Online Servers are not available yet. We're working on it!">
                 Online Servers
               </Tip>
+            </li> */}
+            <li>
+              <Link href="/team">Team</Link>
             </li>
-            <li onClick={() => newTab("https://docs.localshare.ir")}>
-              Documentations
+            <li>
+              <Link href="https://development.localshare.ir" target="_blank">
+                Development
+              </Link>
             </li>
           </ul>
         </div>
