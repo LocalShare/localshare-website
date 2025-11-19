@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div role="grid" className="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div className="flex flex-col col-span-2 gap-6 text-balance">
-          <Blockquote>
+          <Blockquote fromWho="ChatGPT">
             Tbh, this feels like LAN AirDrop + Discord screenshare + Chromecast
             had a baby
           </Blockquote>

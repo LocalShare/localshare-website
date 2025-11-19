@@ -8,10 +8,21 @@ import Footer from "@/components/blocks/Footer";
 
 import "./globals.css";
 
-const inter = Inter();
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: "LocalShare",
+  title: {
+    template: "%s | LocalShare",
+    default: "LocalShare",
+  },
   description:
     "Share Media, Locally. Decentralized and Free For All. Easy-to-use On The Go.",
   authors: {
@@ -29,14 +40,12 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body
-          className={`${inter.className} antialiased select-none bg-background! text-foreground!`}
-        >
+        <body className={inter.className}>
           {process.env.NODE_ENV === "development" ? null : <DisableDevtool />}
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
             enableSystem
+            defaultTheme="system"
             disableTransitionOnChange
           >
             <main className="p-8 min-h-dvh sm:p-14 md:p-16">

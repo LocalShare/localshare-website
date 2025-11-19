@@ -3,20 +3,17 @@
 import newTab from "@/lib/newTab";
 
 export default function Alink({
-  href,
-  className,
+  href = "",
+  className = "",
   children,
 }: {
-  href: string;
+  href?: string;
   className?: string;
   children: React.ReactNode;
 }) {
+  const forward = () => (href?.length > 0 ? newTab(href) : null);
   return (
-    <span
-      className={`cursor-pointer border-b border-ring hover:text-ring hover:border-transparent transition-colors ${className}`}
-      onClick={() => newTab(href)}
-      role="link"
-    >
+    <span className={`link ${className}`} onClick={forward} role="link">
       {children}
     </span>
   );

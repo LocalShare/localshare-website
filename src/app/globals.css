@@ -114,17 +114,4 @@
   --color-localshare-blue: var(--localshare-blue);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  div[role="grid"] > * > ul > li {
-    @apply transition-colors hover:text-accent-foreground hover:cursor-pointer w-fit;
-  }
-}
+@import "./custom.css";
