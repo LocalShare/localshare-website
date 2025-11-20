@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "../ui/button";
-import newTab from "@/lib/newTab";
 import { ModeToggle } from "../ModeToggle";
 import {
   GithubLogoIcon,
@@ -21,11 +20,15 @@ export default function Navigation() {
       <Button
         variant="outline"
         size="icon"
-        onClick={() => newTab("https://github.com/localshare")}
+        onClick={() => router.push("https://github.com/localshare")}
       >
         <GithubLogoIcon weight="bold" />
       </Button>
-      <Button variant="outline" size="icon">
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={() => router.push("https://x.com/localshare")}
+      >
         <TwitterLogoIcon weight="bold" />
       </Button>
       {/* <Button variant="outline" onClick={() => null}>

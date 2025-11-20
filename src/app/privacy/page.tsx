@@ -1,4 +1,4 @@
-import Alink from "@/components/Alink";
+import Clink from "@/components/Link";
 import Blockquote from "@/components/Blockquote";
 import type { Metadata } from "next";
 
@@ -37,7 +37,9 @@ export default function Privacy() {
           (and its sub-projects, modules, and submodules)
         </span>{" "}
         are available on{" "}
-        <Alink href="https://github.com/LocalShare">GitHub</Alink>
+        <Clink href="https://github.com/LocalShare" newtab>
+          GitHub
+        </Clink>
       </Blockquote>
     </>
   );

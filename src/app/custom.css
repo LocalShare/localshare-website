@@ -8,11 +8,6 @@
   h1 {
     @apply text-2xl font-semibold my-4;
   }
-
-  div[role="grid"] > * > ul > li {
-    /* This is for the footer links */
-    @apply transition-colors hover:text-accent-foreground hover:cursor-pointer w-fit;
-  }
 }
 
 .link {

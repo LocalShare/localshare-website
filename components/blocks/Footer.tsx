@@ -4,8 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Separator } from "../ui/separator";
 import Tip from "../Tip";
-import newTab from "@/lib/newTab";
-import Link from "next/link";
+import Clink from "../Link";
 import Navigation from "./Navigation";
 
 export default function Footer() {
@@ -40,19 +39,19 @@ export default function Footer() {
         <Separator />
       </div>
       <div
-        className="grid grid-cols-2 px-8 py-8 md:grid-cols-7 gap-y-8 "
+        className="grid grid-cols-2 px-8 py-8 md:grid-cols-7 gap-y-8 *:*:*:*:border-b-0!"
         role="grid"
       >
         <div>
           <ul className="flex flex-col gap-6 text-sm lg:gap-2 text-muted-foreground">
             <li>
-              <Link href="/download">Download</Link>
+              <Clink href="/download">Download</Clink>
             </li>
             <li>Blog</li>
             <li>
-              <Link href="https://github.com/orgs/LocalShare/discussions">
+              <Clink href="https://github.com/orgs/LocalShare/discussions">
                 Disscusions
-              </Link>
+              </Clink>
             </li>
           </ul>
         </div>
@@ -60,27 +59,13 @@ export default function Footer() {
         <div>
           <ul className="flex flex-col gap-6 text-sm lg:gap-2 text-muted-foreground">
             <li>
-              <Link href="/about">About</Link>
+              <Clink href="/about">About</Clink>
             </li>
             <li>
-              <Link href="/license">License</Link>
+              <Clink href="/license">License</Clink>
             </li>
             <li>
-              <Link href="/privacy">Privacy Policy</Link>
-            </li>
-          </ul>
-        </div>
-        <Separator orientation="vertical" className="hidden mx-auto md:block" />
-        <div>
-          <ul className="flex flex-col gap-6 text-sm lg:gap-2 text-muted-foreground">
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
-            <li>
-              <Link href="/faq">FAQ</Link>
-            </li>
-            <li>
-              <Link href="/report">Report Issues</Link>
+              <Clink href="/privacy">Privacy Policy</Clink>
             </li>
           </ul>
         </div>
@@ -88,9 +73,23 @@ export default function Footer() {
         <div>
           <ul className="flex flex-col gap-6 text-sm lg:gap-2 text-muted-foreground">
             <li>
-              <Link href="https://docs.localshare.ir" target="_blank">
+              <Clink href="/contact">Contact</Clink>
+            </li>
+            <li>
+              <Clink href="/faq">FAQ</Clink>
+            </li>
+            <li>
+              <Clink href="/report">Report Issues</Clink>
+            </li>
+          </ul>
+        </div>
+        <Separator orientation="vertical" className="hidden mx-auto md:block" />
+        <div>
+          <ul className="flex flex-col gap-6 text-sm lg:gap-2 text-muted-foreground">
+            <li>
+              <Clink href="https://docs.localshare.ir" newtab>
                 Documentations
-              </Link>
+              </Clink>
             </li>
             {/* <li>
               <Tip tipText="Online Servers are not available yet. We're working on it!">
@@ -98,12 +97,12 @@ export default function Footer() {
               </Tip>
             </li> */}
             <li>
-              <Link href="/team">Team</Link>
+              <Clink href="/team">Team</Clink>
             </li>
             <li>
-              <Link href="https://development.localshare.ir" target="_blank">
+              <Clink href="https://development.localshare.ir" newtab>
                 Development
-              </Link>
+              </Clink>
             </li>
           </ul>
         </div>

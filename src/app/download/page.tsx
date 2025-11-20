@@ -1,4 +1,4 @@
-import Alink from "@/components/Alink";
+import Clink from "@/components/Link";
 import LocalShare from "@/components/LocalShare";
 import Blockquote from "@/components/Blockquote";
 import type { Metadata } from "next";
@@ -19,9 +19,9 @@ export default function Download() {
       <p>Please stay tuned for our first stable release!</p>
       <Blockquote>
         You can see our development progress on{" "}
-        <Alink href="https://development.localshare.ir">
+        <Clink href="https://development.localshare.ir" newtab>
           development.localshare.ir
-        </Alink>
+        </Clink>
         .
       </Blockquote>
     </>

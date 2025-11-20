@@ -1,7 +1,8 @@
-import Alink from "@/components/Alink";
+import Clink from "@/components/Link";
 import Blockquote from "@/components/Blockquote";
 import LocalShare from "@/components/LocalShare";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
             height={128}
             className="p-4"
           />
-          <h1 className="text-4xl font-black">LocalShare</h1>
+          <h1 className="text-4xl font-black m-0">LocalShare</h1>
         </header>
         <h2 className="text-xl">Stream Media, Locally</h2>
       </div>
@@ -37,15 +38,18 @@ export default function Home() {
             </strong>{" "}
             We're plannning on releasing this app for Android and Windows. The
             progress can be seen on{" "}
-            <Alink href="https://development.localshare.ir">
+            <Clink href="https://development.localshare.ir">
               our development tracker board
-            </Alink>
+            </Clink>
             .
           </p>
           <p className="text-sm">
             Note that this app cannot help you with sending/receiving files. We
             recommend using{" "}
-            <Alink href="https://localsend.org/">LocalSend</Alink> for that.
+            <Clink href="https://localsend.org/" newtab>
+              LocalSend
+            </Clink>{" "}
+            for that.
           </p>
           <p>Await!</p>
         </div>

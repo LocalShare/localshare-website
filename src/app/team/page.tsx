@@ -2,9 +2,8 @@ import Link from "next/link";
 import LocalShare from "@/components/LocalShare";
 import { Separator } from "@/components/ui/separator";
 import Blockquote from "@/components/Blockquote";
-import newTab from "@/lib/newTab";
 import { Metadata } from "next";
-import Alink from "@/components/Alink";
+import Clink from "@/components/Link";
 
 export const metadata: Metadata = {
   title: "Team",
@@ -39,8 +38,10 @@ export default function Team() {
         </div>
       </div> */}
       <div className="flex gap-6 justify-around *:w-50 *:text-center *:border *:rounded-md *:p-4 *:cursor-pointer *:hover:bg-accent/50 *:transition-colors">
-        <Alink href="https://alialmasi.ir">Ali Almasi</Alink>
-        <Alink>Mobin Pourhoshangi</Alink>
+        <Clink href="https://alialmasi.ir" newtab>
+          Ali Almasi
+        </Clink>
+        <Clink href="#">Mobin Pourhoshangi</Clink>
       </div>
       <Separator />
       <Blockquote className="text-ring">
